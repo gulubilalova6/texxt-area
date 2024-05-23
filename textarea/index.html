@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: burlywood;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .li{
+            color: red;
+           
+            
+            box-shadow: 0 0 5px 4px rgb(251, 238, 152);
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+        #input{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input">
+    <ul id="ul"></ul>
+    <script>
+        let text=document.getElementById('input')
+
+        text.addEventListener('keyup',(event)=>{
+
+            let key=event.keyCode
+            if( key===13){
+                let li=document.createElement('li')
+                li.classList.add('li')
+                li.append(event.target.value)
+                ul.append(li)
+            }
+               
+
+                
+            
+        })
+    </script>
+</body>
+</html>
